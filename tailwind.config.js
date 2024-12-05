@@ -3,7 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        white: "#fff",
+        lightWhite: "#f6f3fc",
+        primary: "#8750f7",
+        secondary: "#2a1454",
+        darkBlack: "#140c1c",
+        gray: "#d9d9d9",
+        purple: "#814cec",
+      },
       boxShadow: {
         "custom-light": "0px 0.5px 10px rgba(0, 0, 0, 0.08)",
       },
