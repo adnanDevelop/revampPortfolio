@@ -25,3 +25,77 @@
     transform: translate(-50%, -130%);
   }
 }
+
+.top-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 0.2rem 1.5rem rgba(135, 80, 247, 0.5);
+  background-color: #8750f7;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.color {
+  box-shadow: 0 0.2rem 1.5rem rgba(135, 80, 247, 0.8);
+  color: #ffffff1a;
+}
+
+.top-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.top-icon::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #140c1c;
+}
+
+.animate {
+  animation: topBtn 0.5s linear;
+  opacity: 1;
+}
+
+@keyframes topBtn {
+  0% {
+    transform: translateY(6rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+.icon-animation {
+  animation: iconAnimation 1.5s infinite alternate-reverse;
+  display: block;
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: translateY(-0.1rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
