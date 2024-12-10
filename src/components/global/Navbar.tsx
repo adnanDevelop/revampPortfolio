@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Large Screen Navbar */}
-      <nav className="2xl:w-[1200px] xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10">
+      <nav className="2xl:w-[1200px] bg-transparent xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-purple">
         {/* Logo */}
         <div className="ps-[14px]">
           <h3 className="xl:text-[35px] text-[30px] font-medium text-white cursor-pointer font-stylish">

@@ -12,6 +12,6 @@
     @apply transition-all duration-300 ease-in-out;
   }
   .btn-primary {
-    @apply relative h-10 px-6 xl:text-sm text-[13px] text-white transition-all duration-500 ease-in-out bg-transparent border rounded-full font-poppin overflow-hidden border-primary hover:scale-95 before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-[-5px] before:w-1/2 before:h-[10px] before:z-[-1] before:rounded-full before:bg-primary before:transitions hover:before:h-full hover:before:w-full hover:before:bottom-0 focus:before:w-full focus:before:h-full focus:before:bottom-0;
+    @apply relative h-10 px-6 xl:text-sm text-[13px] text-white transition-all duration-500 ease-in-out bg-transparent border rounded-full font-poppin overflow-hidden border-primary hover:scale-95 before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-[-5px] before:w-1/2 before:h-[10px] before:z-[-1] before:rounded-full before:bg-primary before:transitions hover:before:h-full hover:before:w-full hover:before:bottom-0 focus:before:w-full focus:before:h-full focus:before:bottom-0 shadow-purple before:shadow-purple;
   }
 }
