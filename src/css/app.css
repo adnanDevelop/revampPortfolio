@@ -1,0 +1,27 @@
+.nav-show {
+  animation: navShowAnimation 0.3s ease-in-out forwards;
+}
+
+.nav-hide {
+  animation: navHideAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes navShowAnimation {
+  0% {
+    transform: translate(-50%, -130%);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes navHideAnimation {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(-50%, -130%);
+  }
+}

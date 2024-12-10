@@ -18,15 +18,16 @@ export default {
 
       fontFamily: {
         poppin: ["Poppins", "sans-serif"],
-        raisone: ["Raisonne", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        secondary: ["Montserrat", "sans-serif"],
+        sora: ["Sora", "sans-serif"],
+        stylish: ["WindSong", "cursive"],
       },
       screens: {
         sm: "640px",
         md: "768px",
-        lg: "1024px",
+        lg: "1030px",
         xl: "1280px",
-        "2xl": "1500px",
+        "2xl": "1400px",
         "3xl": "1620px",
       },
     },

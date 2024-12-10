@@ -1,10 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&family=WindSong:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    body {
-        @apply scroll-smooth bg-darkBlack;
-    }
+  body {
+    @apply overflow-x-hidden scroll-smooth bg-darkBlack font-poppin;
+  }
+  .transitions {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .btn-primary {
+    @apply relative h-10 px-6 xl:text-sm text-[13px] text-white transition-all duration-500 ease-in-out bg-transparent border rounded-full font-poppin overflow-hidden border-primary hover:scale-95 before:absolute before:left-1/2 before:-translate-x-1/2 before:bottom-[-5px] before:w-1/2 before:h-[10px] before:z-[-1] before:rounded-full before:bg-primary before:transitions hover:before:h-full hover:before:w-full hover:before:bottom-0 focus:before:w-full focus:before:h-full focus:before:bottom-0;
+  }
 }
