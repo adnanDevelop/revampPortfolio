@@ -1,3 +1,28 @@
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50%;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 2px solid #140c1c;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #2a1454, rgba(135, 80, 247, 1));
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(58, 151, 122, 1) 0%,
+    rgba(135, 80, 247, 1) 100%
+  );
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #140c1c;
+}
+
+/* Navbar animation */
 .nav-show {
   animation: navShowAnimation 0.3s ease-in-out forwards;
 }
@@ -26,6 +51,7 @@
   }
 }
 
+/* Top Button */
 .top-btn {
   position: fixed;
   bottom: 1.5rem;

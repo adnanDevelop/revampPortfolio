@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import { FaArrowUp } from "react-icons/fa";
 
 const TopBtn = () => {
@@ -27,7 +28,10 @@ const TopBtn = () => {
   }, []);
 
   return (
-    <button
+    <Link
+      to="hero"
+      duration={500}
+      smooth={true}
       className={`top-btn ${iconAnimation ? "animate" : ""}  `}
       style={{
         background: `conic-gradient(#8750f7 ${buttonAnimation}%, #ffffff1a ${buttonAnimation}%)`,
@@ -38,7 +42,7 @@ const TopBtn = () => {
           <FaArrowUp className="text-lg" />
         </span>
       </div>
-    </button>
+    </Link>
   );
 };
 
