@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Large Screen Navbar */}
-      <nav className="2xl:w-[1200px] bg-transparent xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-purple">
+      <nav className="2xl:w-[1200px] bg-[#08d6650e] backdrop-blur-sm xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-green">
         {/* Logo */}
         <div className="ps-[14px]">
           <h3 className="xl:text-[35px] text-[30px] font-medium text-white cursor-pointer font-stylish">
@@ -62,7 +62,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 key={link?.title}
-                className="relative xl:text-sm cursor-pointer text-[13px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions"
+                className="relative cursor-pointer text-[13px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions hover:scale-[1.1] "
               >
                 {link?.title}
               </Link>
@@ -105,7 +105,7 @@ const Navbar = () => {
       </nav>
       {/*  Sidebar */}
       <div
-        className={`fixed w-[250px] h-screen bg-secondary border-r-2 border-r-primary rounded-tr-xl top-0 transitions overflow-y-auto z-[60] ${
+        className={`fixed w-[250px] h-screen bg-[#08d6650e] border-r-2 border-r-primary rounded-tr-xl top-0 transitions overflow-y-auto z-[60] backdrop-blur-sm ${
           sideBar ? " left-[0%]" : "left-[-200%]"
         } `}
       >
@@ -138,7 +138,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               key={link?.title}
-              className="relative cursor-pointer text-[18px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions"
+              className="relative cursor-pointer text-[18px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions hover:scale-[1.1]"
             >
               {link?.title}
             </Link>

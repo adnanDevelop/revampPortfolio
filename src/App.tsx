@@ -25,12 +25,12 @@ function App() {
   return (
     <>
       <SmoothScroll>
-      {showLoader && <Loader />}
-      {showHome && (
-        <div className="home-container">
-          <Home />
-        </div>
-      )}
+        {showLoader && <Loader />}
+        {showHome && (
+          <div className="home-container">
+            <Home />
+          </div>
+        )}
       </SmoothScroll>
     </>
   );
