@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { GrClose } from "react-icons/gr";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [open, setOpen] = useState<boolean>(false);
   const [sideBar, showSideBar] = useState<boolean>(false);
   const navLinks = [
-    { title: "Home", href: "#home" },
-    { title: "About", href: "#about" },
-    { title: "Skill", href: "#skills" },
-    { title: "Service", href: "#service" },
-    { title: "Experience", href: "#experience" },
-    { title: "Portfolio", href: "#portfolio" },
-    { title: "Testmonials", href: "#testmonials" },
-    { title: "Contact", href: "#contact" },
+    { title: "Home", href: "home" },
+    { title: "About", href: "about" },
+    { title: "Skill", href: "skills" },
+    { title: "Service", href: "service" },
+    { title: "Experience", href: "experience" },
+    { title: "Portfolio", href: "portfolio" },
+    { title: "Testmonials", href: "testmonials" },
+    { title: "Contact", href: "contact" },
   ];
 
   // Scroll Animation
@@ -55,13 +56,16 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <div className="flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
+                to={link?.href}
+                spy={true}
+                smooth={true}
+                duration={500}
                 key={link?.title}
-                href={link?.href}
-                className="relative xl:text-sm text-[13px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions"
+                className="relative xl:text-sm cursor-pointer text-[13px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions"
               >
                 {link?.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -126,19 +130,20 @@ const Navbar = () => {
         </div>
 
         {/* Links */}
-        {/* <div className="flex items-center justify-center w-full h-full"> */}
         <div className="flex flex-col items-center justify-center gap-6 pt-[100px]">
           {navLinks.map((link) => (
-            <a
+            <Link
+              to={link?.href}
+              spy={true}
+              smooth={true}
+              duration={500}
               key={link?.title}
-              href={link?.href}
-              className="relative text-[18px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions"
+              className="relative cursor-pointer text-[18px] text-white uppercase transitions font-secondary hover:text-primary before:absolute before:bottom-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-[6px] before:h-[6px] before:rounded-full before:bg-primary before:opacity-0 hover:before:opacity-100 before:transitions"
             >
               {link?.title}
-            </a>
+            </Link>
           ))}
         </div>
-        {/* </div> */}
       </div>
     </div>
   );
