@@ -4,7 +4,7 @@ import { navLinks } from "../../pages/data";
 const Footer = () => {
   return (
     <footer className="pt-[50px] bg-[url('/image/footer-bg.png')] bg-center bg-no-repeat bg-cover">
-      <div className="flex flex-col items-center justify-center xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] mx-auto">
+      <div className="flex flex-col items-center justify-center custom-width">
         <h3 className="xl:text-[50px] text-[30px] font-medium text-white cursor-pointer font-stylish ">
           <span className="text-primary">Ad</span>nan
         </h3>

@@ -26,7 +26,7 @@ const Navbar = () => {
     <div>
       {/* Large Screen Navbar */}
       <nav
-        className={`2xl:w-[1200px] bg-[#08d6650e] backdrop-blur-sm xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-green ${
+        className={`2xl:w-[1200px] bg-[#08d6650e] backdrop-blur-sm custom-width sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-green ${
           navAnimation && "nav-animation"
         }`}
       >
