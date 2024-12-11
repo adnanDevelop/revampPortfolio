@@ -6,6 +6,17 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+export const navLinks = [
+  { title: "Home", href: "home" },
+  { title: "About", href: "about" },
+  { title: "Skill", href: "skills" },
+  { title: "Service", href: "service" },
+  { title: "Experience", href: "experience" },
+  { title: "Portfolio", href: "portfolio" },
+  { title: "Testmonials", href: "testmonials" },
+  { title: "Contact", href: "contact" },
+];
+
 export const socialLinks = [
   {
     icon: <FaWhatsapp />,

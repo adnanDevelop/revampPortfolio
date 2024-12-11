@@ -1,40 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GrClose } from "react-icons/gr";
 import { Link } from "react-scroll";
+import { navLinks } from "../../pages/data";
 
 const Navbar = () => {
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [navAnimation, setNavAnimation] = useState(false);
   const [open, setOpen] = useState<boolean>(false);
   const [sideBar, showSideBar] = useState<boolean>(false);
-  const navLinks = [
-    { title: "Home", href: "home" },
-    { title: "About", href: "about" },
-    { title: "Skill", href: "skills" },
-    { title: "Service", href: "service" },
-    { title: "Experience", href: "experience" },
-    { title: "Portfolio", href: "portfolio" },
-    { title: "Testmonials", href: "testmonials" },
-    { title: "Contact", href: "contact" },
-  ];
 
   // Scroll Animation
-  useEffect(() => {
-    const windowScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && window.scrollY > 50) {
-        document.querySelector("nav")?.classList.add("nav-hide");
-        document.querySelector("nav")?.classList.remove("nav-show");
-      } else {
-        document.querySelector("nav")?.classList.add("nav-show");
-        document.querySelector("nav")?.classList.remove("nav-hide");
-      }
-      setLastScrollY(currentScrollY);
-    };
-    window.addEventListener("scroll", windowScroll);
-
-    return () => window.removeEventListener("scroll", windowScroll);
-  }, [lastScrollY]);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY) {
+      setNavAnimation(true);
+    } else {
+      setNavAnimation(false);
+    }
+  });
 
   const openSidebar = () => {
     showSideBar(!sideBar);
@@ -44,7 +25,11 @@ const Navbar = () => {
   return (
     <div>
       {/* Large Screen Navbar */}
-      <nav className="2xl:w-[1200px] bg-[#08d6650e] backdrop-blur-sm xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-green">
+      <nav
+        className={`2xl:w-[1200px] bg-[#08d6650e] backdrop-blur-sm xl:w-[1150px] lg:w-[960px] md:w-[75%] sm:w-[580px] w-[90%] sm:h-[60px] h-[50px] fixed top-4 flex items-center justify-between -translate-x-1/2 border rounded-full left-1/2 border-primary z-10 shadow-green ${
+          navAnimation && "nav-animation"
+        }`}
+      >
         {/* Logo */}
         <div className="ps-[14px]">
           <h3 className="xl:text-[35px] text-[30px] font-medium text-white cursor-pointer font-stylish">
@@ -72,7 +57,14 @@ const Navbar = () => {
 
         {/* Button */}
         <div className="lg:pe-[8px] pe-[15px] flex items-center gap-4">
-          <button className="hidden btn-primary sm:block">Download CV</button>
+          <a
+            href="/image/my-cv.pdf"
+            download={"/image/my-cv.pdf"}
+            rel="noreferrer"
+            className="hidden btn-primary sm:block"
+          >
+            Download CV
+          </a>
           {/* Hamburger */}
           <div className="block lg:hidden">
             <button
